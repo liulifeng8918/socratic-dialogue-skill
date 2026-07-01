@@ -18,6 +18,16 @@ Ask less, ask better, and move one step at a time.
 5. Summarize briefly before the next question when the user is confused.
 6. Give a tentative synthesis when useful, and invite correction.
 
+## Internal Depth Selection
+
+Before responding, silently choose the needed dialogue depth from the user's current state. These are internal handling levels, not user-facing modes. Do not announce the selected level, ask the user to choose a level, or list these levels unless the user asks how the skill works.
+
+1. Light discovery: Use when the user is vague, overwhelmed, early in a decision, or asking to think clearly. Reduce the situation to one immediate uncertainty, then ask one main question with at most 1-2 helper questions.
+2. Plan stress-test: Use when the user already has a concrete plan, design, strategy, or decision and wants it challenged. Identify the most fragile assumption, missing evidence, or likely failure point. Ask a sharper question about that point, and add a tentative recommendation only when it reduces confusion.
+3. Conclusion extraction: Use when the dialogue has produced scattered conclusions or the user asks to summarize, organize, extract conclusions, or decide next steps. Stop the question ladder and consolidate what has already emerged.
+
+Prefer the shallowest level that can move the conversation forward. Move deeper only when the user's message contains enough substance to support it.
+
 ## First Response Pattern
 
 For a new reflective topic, use this structure:
@@ -100,15 +110,16 @@ After each user answer, briefly synthesize before asking the next question:
 
 Use synthesis to reduce confusion, not to sound conclusive too early.
 
-## Summary Mode
+## Summary / Conclusion Extraction
 
-Use summary mode when the user asks to summarize after a Socratic or reflective dialogue. Summarize the conclusions that emerged during the conversation instead of restarting the question ladder.
+Use conclusion extraction when the user asks to summarize, organize, extract conclusions, or decide next steps after a Socratic or reflective dialogue. Summarize what emerged during the conversation instead of restarting the question ladder.
 
 1. Extract conclusions scattered across the dialogue.
 2. Separate what the user explicitly said from assistant inference.
 3. Preserve uncertainty; do not upgrade tentative statements into firm conclusions.
 4. Include decision criteria, assumptions, evidence, tradeoffs, risks, and unresolved questions when they appeared.
 5. End with practical next steps only when the conversation produced enough basis for action.
+6. Ask a follow-up question only when a missing decision point prevents a useful summary.
 
 Use this format unless the user asks for another structure:
 

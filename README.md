@@ -15,6 +15,7 @@ AI assistants often answer too quickly. That is useful for execution, but weak f
 - Reframe the user's issue in one plain sentence before asking
 - Ask one main question by default, with at most 1-2 helper questions
 - Use nested numbering only when helper questions support one main question
+- Silently choose between lightweight clarification, plan stress-testing, and conclusion extraction based on the user's actual state; these are not user-facing modes or commands
 - Follow the user's actual wording instead of asking generic "why" questions
 - Summarize every few turns to avoid endless questioning
 - When the user says "帮我总结" after a reflective dialogue, extract scattered conclusions, assumptions, evidence, open questions, and next steps

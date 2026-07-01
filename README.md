@@ -16,8 +16,10 @@ AI assistants often answer too quickly. That is useful for execution, but weak f
 - Group logically related questions with nested numbering like `1`, `1.1`, `1.2`
 - Follow the user's actual wording instead of asking generic "why" questions
 - Summarize every few turns to avoid endless questioning
+- When the user says "帮我总结" after a reflective dialogue, extract scattered conclusions, assumptions, evidence, open questions, and next steps
 - Avoid triggering for coding, factual lookup, urgent answers, or direct execution
 - Support both Chinese and English prompts
+- No scripts, no network calls, no API keys; this is an instruction-only skill that is safe to inspect before use
 
 ## When To Use It
 
@@ -46,6 +48,10 @@ Do not use it when you want a direct implementation, a factual lookup, an urgent
 Use Socratic questioning to help me evaluate this product strategy.
 ```
 
+```text
+帮我总结一下刚才对话里已经形成的结论。
+```
+
 ## Install
 
 For Codex user-wide use, copy the skill folder:
@@ -68,11 +74,24 @@ For repo-scoped use, copy it to:
 
 Restart Codex if the skill does not appear immediately.
 
+## Compatibility
+
+This skill uses the common `SKILL.md` directory format and has no runtime dependencies.
+
+See [COMPATIBILITY.md](COMPATIBILITY.md) for usage notes for Codex, Kimi / Kimi Code, OpenClaw, Hermes Agent, WorkBuddy / CodeBuddy, Coze, and Doubao.
+
+For tools that expect the skill root to contain `SKILL.md` directly, use:
+
+```text
+dist/socratic-dialogue
+```
+
 ## Project Structure
 
 ```text
 socratic-dialogue-skill/
   README.md
+  COMPATIBILITY.md
   LICENSE
   skills/
     socratic-dialogue/
@@ -81,8 +100,14 @@ socratic-dialogue-skill/
         openai.yaml
   examples/
     decision-career-change.md
+    dialogue-summary.md
     startup-assumption-check.md
     product-strategy.md
+  dist/
+    socratic-dialogue/
+      SKILL.md
+      agents/
+        openai.yaml
 ```
 
 ## Feedback Wanted

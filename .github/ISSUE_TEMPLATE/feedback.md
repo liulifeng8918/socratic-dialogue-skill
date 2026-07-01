@@ -28,8 +28,9 @@ What should the skill have done differently?
 
 - Triggered or not triggered:
 - Asked too many or too few questions:
+- Felt lightweight or overwhelming:
 - Questions were too generic or leading:
-- Nested numbering was helpful or confusing:
+- Reframed the problem clearly or made it more confusing:
 - Other:
 
 ## Context

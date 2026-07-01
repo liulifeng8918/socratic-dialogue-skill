@@ -1,7 +1,7 @@
 interface:
   display_name: "Socratic Dialogue"
-  short_description: "Guided questions for clear thinking."
-  default_prompt: "Use $socratic-dialogue to help me think through this with concise Socratic questions."
+  short_description: "Lightweight questions for clear thinking."
+  default_prompt: "Use $socratic-dialogue to help me think through this with one sharp question at a time."
 
 policy:
   allow_implicit_invocation: true
